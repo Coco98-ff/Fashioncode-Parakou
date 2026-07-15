@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Code | Votre Salon de Beauté d'Exception à Parakou</title>
+    <meta name="description" content="Découvrez Fashion Code, votre salon de beauté tout-en-1 à Parakou. Tresses d'art, maquillage, onglerie et formations exclusives.">
+    
+    <!-- Typographies Premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icônes -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        :root {
+            --bg-deep: radial-gradient(circle at center, #14110c 0%, #050505 100%);
+            --black-card: rgba(15, 12, 10, 0.85);
+            --gold-gradient: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+            --gold-pure: #d4af37;
+            --gold-glow: rgba(212, 175, 55, 0.3);
+            --white-silk: #fdfbf7;
+            --gray-subtle: #a69f96;
+            --border-gold: rgba(212, 175, 55, 0.2);
+            --transition-luxe: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            
+            --font-serif: 'Cinzel', serif;
+            --font-cursive: 'Great Vibes', cursive;
+            --font-sans: 'Montserrat', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        body {
+            background: #050505;
+            background-image: var(--bg-deep);
+            color: var(--white-silk);
+            font-family: var(--font-sans);
+            overflow-x: hidden;
+            line-height: 1.7;
+            letter-spacing: 0.03em;
+        }
+
+        /* Effet de lueur d'arrière-plan magique */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            font-weight: 400;
+            letter-spacing: 0.15em;
+        }
+
+        a { text-decoration: none; color: inherit; transition: var(--transition-luxe); }
+        img { max-width: 100%; display: block; filter: contrast(102%) brightness(95%); }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 8%;
+        }
+
+        /* --- LOGO PREMIUM "FC" AVEC SILHOUETTE --- */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+        }
+
+        /* Silhouette Royale FC dessinée en pur CSS */
+        .logo-silhouette {
+            position: relative;
+            width: 45px;
+            height: 45px;
+            background: var(--gold-gradient);
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50,15 C45,8 55,8 50,15 Z M38,20 L42,27 L50,18 L58,27 L62,20 L58,32 L42,32 Z M50,30 C30,30 25,48 35,62 C38,66 42,65 40,72 C36,85 52,95 62,88 C55,85 53,78 57,75 C68,65 70,45 50,30 Z'/%3E%3C/svg%3E") no-repeat center/contain;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50,15 C45,8 55,8 50,15 Z M38,20 L42,27 L50,18 L58,27 L62,20 L58,32 L42,32 Z M50,30 C30,30 25,48 35,62 C38,66 42,65 40,72 C36,85 52,95 62,88 C55,85 53,78 57,75 C68,65 70,45 50,30 Z'/%3E%3C/svg%3E") no-repeat center/contain;
+            filter: drop-shadow(0 0 8px var(--gold-glow));
+        }
+
+        .logo-text-group {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo-brand {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.1em;
+        }
+
+        .logo-sub {
+            font-size: 0.55rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--gold-pure);
+            margin-top: 2px;
+        }
+
+        /* --- Éléments de Titrage Haute Couture --- */
+        .section-header {
+            text-align: center;
+            margin-bottom: 6rem;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+        }
+
+        .section-subtitle {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--white-silk);
+            letter-spacing: 0.3em;
+            font-weight: 300;
+            opacity: 0.8;
+        }
+
+        .gold-line {
+            width: 80px;
+            height: 1px;
+            background: var(--gold-gradient);
+            margin: 2rem auto 0 auto;
+            position: relative;
+        }
+        .gold-line::after {
+            content: '✦';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--gold-pure);
+            font-size: 0.6rem;
+            background: #050505;
+            padding: 0 8px;
+        }
+
+        /* Boutons Chics Enveloppés d'Or */
+        .btn-gold {
+            display: inline-block;
+            padding: 1.1rem 2.8rem;
+            background: var(--gold-gradient);
+            color: #0b0907;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.25em;
+            border-radius: 50px; /* Style arrondi ultra moderne */
+            transition: var(--transition-luxe);
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
+            border: 1px solid transparent;
+        }
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px var(--gold-glow);
+            color: #000;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 1.1rem 2.8rem;
+            border: 1px solid var(--gold-pure);
+            color: var(--gold-pure);
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.25em;
+            border-radius: 50px;
+            background: transparent;
+            transition: var(--transition-luxe);
+        }
+        .btn-outline:hover {
+            background: var(--gold-gradient);
+            color: #000;
+            border-color: transparent;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px var(--gold-glow);
+        }
+
+        /* --- Header --- */
+        header {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            padding: 2rem 0;
+            z-index: 1000;
+            transition: var(--transition-luxe);
+            border-bottom: 1px solid transparent;
+        }
+        header.scrolled {
+            padding: 1rem 0;
+            background: rgba(5, 5, 5, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-gold);
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        
+        .main-nav ul { display: flex; gap: 2rem; }
+        .main-nav a {
+            font-size: 0.75rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--gray-subtle);
+        }
+        .main-nav a:hover { color: var(--gold-pure); }
+
+        .mobile-nav-toggle { display: none; color: var(--gold-pure); font-size: 2rem; background: none; border: none; cursor: pointer; }
+
+        @media (max-width: 1100px) {
+            .main-nav { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(10, 8, 7, 0.98); backdrop-filter: blur(20px); padding: 3rem 8%; border-bottom: 1px solid var(--border-gold); flex-direction: column; text-align: center; }
+            .main-nav.active { display: flex; }
+            .main-nav ul { flex-direction: column; gap: 2rem; }
+            .mobile-nav-toggle { display: block; }
+            header .btn-outline { display: none; }
+        }
+
+        /* --- Hero Section --- */
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1616165415772-870d0617387a?q=80&w=2560&auto=format&fit=crop') no-repeat center center/cover;
+            text-align: center;
+            padding: 0 1rem;
+        }
+        
+        #hero-content { opacity: 0; transform: translateY(30px); animation: fadeInUp 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s; }
+        
+        /* Titre double style Haute Couture */
+        .brand-title-luxury {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .brand-title-top {
+            font-family: var(--font-serif);
+            font-size: 5rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #fff;
+            line-height: 1;
+        }
+        
+        .brand-title-bottom {
+            font-family: var(--font-cursive);
+            font-size: 4.5rem;
+            color: var(--gold-pure);
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 0.6;
+            margin-top: -10px;
+            filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.3));
+        }
+
+        @media (max-width: 768px) { 
+            .brand-title-top { font-size: 3rem; }
+            .brand-title-bottom { font-size: 3.2rem; }
+        }
+
+        #hero h1 { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 300; margin-bottom: 4rem; text-transform: uppercase; letter-spacing: 0.4em; color: var(--white-silk); opacity: 0.8; }
+        
+        .hero-btns { display: flex; gap: 2rem; justify-content: center; }
+        @media (max-width: 768px) { .hero-btns { flex-direction: column; gap: 1.2rem; padding: 0 10%; } }
+
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+
+        /* --- Prestations Section --- */
+        #prestations { padding: 140px 0; }
+        
+        .grid-prestations {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .prestation-card {
+            background: var(--black-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            position: relative;
+            transition: var(--transition-luxe);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .prestation-img-wrapper {
+            position: relative;
+            width: 100%;
+            height: 380px;
+            overflow: hidden;
+        }
+        
+        .prestation-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-luxe);
+        }
+        
+        .prestation-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .prestation-card-info {
+            padding: 2.2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .prestation-card:hover {
+            border-color: var(--gold-pure);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .prestation-card-info h3 {
+            font-size: 1.3rem;
+            color: var(--white-silk);
+            margin-bottom: 1rem;
+            letter-spacing: 0.1em;
+        }
+        
+        .prestation-card-info p {
+            font-size: 0.85rem;
+            color: var(--gray-subtle);
+            margin-bottom: 2rem;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+        
+        .btn-card-reserve {
+            font-size: 0.75rem;
+            color: var(--gold-pure);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        .btn-card-reserve i { transition: transform 0.4s ease; }
+        .prestation-card:hover .btn-card-reserve i { transform: translateX(6px); }
+
+        /* --- Galerie Section --- */
+        #galerie { padding: 140px 0; background: #030303; }
+        
+        .galerie-filters { display: flex; justify-content: center; gap: 2rem; margin-bottom: 5rem; overflow-x: auto; padding-bottom: 1rem; }
+        .filter-btn { font-family: var(--font-sans); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--gray-subtle); padding: 0.5rem 0; position: relative; background: none; border: none; cursor: pointer; }
+        .filter-btn::after { content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 1px; background: var(--gold-gradient); transition: var(--transition-luxe); transform: translateX(-50%); }
+        .filter-btn.active, .filter-btn:hover { color: var(--white-silk); }
+        .filter-btn.active::after { width: 80%; }
+
+        .galerie-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        @media (max-width: 900px) { .galerie-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .galerie-grid { grid-template-columns: repeat(1, 1fr); } }
+
+        .galerie-item { overflow: hidden; position: relative; cursor: pointer; aspect-ratio: 1; opacity: 0; transform: scale(0.95); transition: var(--transition-luxe); border-radius: 8px; border: 1px solid var(--border-gold); }
+        .galerie-item.show { opacity: 1; transform: scale(1); }
+        .galerie-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .galerie-item:hover img { transform: scale(1.05); }
+        
+        .galerie-item::before {
+            content: '\F629';
+            font-family: bootstrap-icons;
+            position: absolute;
+            inset: 0;
+            background: rgba(5, 5, 5, 0.75);
+            color: var(--gold-pure);
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition-luxe);
+            z-index: 1;
+        }
+        .galerie-item:hover::before { opacity: 1; }
+
+        /* Lightbox */
+        .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(5,5,5,0.98); z-index: 2000; display: none; align-items: center; justify-content: center; opacity: 0; transition: var(--transition-luxe); }
+        .lightbox.active { display: flex; opacity: 1; }
+        .lightbox img { max-width: 85%; max-height: 85%; border: 1px solid var(--border-gold); box-shadow: 0 0 50px rgba(0,0,0,0.8); }
+        .lightbox-close { position: absolute; top: 30px; right: 40px; color: var(--gold-pure); font-size: 2.5rem; cursor: pointer; }
+
+        /* --- Comparateur Section --- */
+        #comparateur { padding: 140px 0; }
+        
+        .comp-container { width: 100%; max-width: 1000px; margin: 0 auto; aspect-ratio: 16/10; position: relative; overflow: hidden; border-radius: 12px; border: 1px solid var(--border-gold); }
+        
+        .comp-image { width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-size: cover; background-position: center; }
+        .comp-before { background-image: url('https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=1200&auto=format&fit=crop'); }
+        .comp-after { background-image: url('https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=1200&auto=format&fit=crop&sepia=1&hue=180&saturation=1.5'); z-index: 2; width: 50%; border-right: 1px solid var(--gold-pure); }
+        
+        .comp-label { position: absolute; bottom: 30px; color: var(--white-silk); background: rgba(0,0,0,0.8); padding: 8px 20px; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; z-index: 3; border: 1px solid var(--border-gold); border-radius: 50px; }
+        .comp-label.before { left: 30px; }
+        .comp-label.after { right: 30px; }
+
+        .comp-handle { position: absolute; top: 0; left: 50%; transform: translateX(-50%); height: 100%; width: 2px; background: var(--gold-pure); z-index: 4; display: flex; align-items: center; justify-content: center; }
+        .comp-circle { position: absolute; width: 44px; height: 44px; border-radius: 50%; background: #0c0a08; border: 1px solid var(--gold-pure); color: var(--gold-pure); display: flex; align-items: center; justify-content: center; font-size: 1rem; box-shadow: 0 0 20px rgba(0,0,0,0.8); }
+
+        .comp-slider { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5; -webkit-appearance: none; background: none; opacity: 0; cursor: col-resize; }
+
+        /* --- Formations Section (L'Académie) --- */
+        #formations { padding: 140px 0; background: #030303; }
+        
+        .formation-card {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--border-gold);
+            background: var(--black-card);
+            padding: 3.5rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            transition: var(--transition-luxe);
+        }
+        .formation-card:hover { border-color: var(--gold-pure); transform: translateY(-4px); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.05); }
+        .formation-card img { width: 220px; height: 220px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-gold); flex-shrink: 0; }
+        
+        .formation-details { margin-left: 4rem; flex-grow: 1; }
+        
+        .formation-meta { display: flex; gap: 2rem; color: var(--gold-pure); font-size: 0.75rem; font-weight: 300; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem; }
+        .formation-meta i { margin-right: 0.5rem; }
+        
+        .formation-details h3 { font-size: 1.6rem; margin-bottom: 1rem; color: var(--white-silk); }
+        .formation-details p { color: var(--gray-subtle); margin-bottom: 0; font-size: 0.9rem; font-weight: 300; line-height: 1.8; max-width: 800px; }
+        
+        .formation-action { flex-shrink: 0; margin-left: 4rem; }
+
+        @media (max-width: 900px) {
+            .formation-card { flex-direction: column; text-align: center; padding: 2.5rem 1.5rem; }
+            .formation-details { margin: 2rem 0; }
+            .formation-meta { justify-content: center; }
+            .formation-action { margin: 0; width: 100%; }
+            .formation-action .btn-outline { width: 100%; }
+        }
+
+        /* --- Réservation Section --- */
+        #reservation { padding: 140px 0; }
+        
+        .booking-ui { max-width: 1200px; margin: 0 auto; display: flex; border: 1px solid var(--border-gold); background: var(--black-card); border-radius: 16px; overflow: hidden; }
+        
+        .booking-form-area { flex: 1.8; padding: 4rem; }
+        .booking-summary-area { flex: 1.2; padding: 4rem; background: rgba(5, 5, 5, 0.5); border-left: 1px solid var(--border-gold); }
+        
+        .form-section-title { color: var(--gold-pure); text-transform: uppercase; letter-spacing: 0.20em; font-size: 0.8rem; margin-bottom: 2rem; padding-bottom: 0.8rem; border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
+
+        .service-selection, .date-time-selection { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 3rem; }
+        @media (max-width: 768px) { .service-selection, .date-time-selection { grid-template-columns: 1fr; } }
+        
+        .booking-item { padding: 1.5rem; border: 1px solid var(--border-gold); border-radius: 8px; cursor: pointer; transition: var(--transition-luxe); display: flex; flex-direction: column; align-items: flex-start; }
+        .booking-item i { color: var(--gold-pure); font-size: 1.4rem; margin-bottom: 1rem; }
+        .booking-item span { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--white-silk); }
+        
+        .booking-item:hover, .booking-item.selected { border-color: var(--gold-pure); background: rgba(212, 175, 55, 0.04); }
+
+        textarea { width: 100%; padding: 1.5rem; background: #050505; border: 1px solid var(--border-gold); border-radius: 8px; color: var(--white-silk); font-family: var(--font-sans); font-size: 0.85rem; resize: vertical; min-height: 120px; }
+        textarea:focus { border-color: var(--gold-pure); }
+
+        .booking-summary h3 { font-size: 1.8rem; color: var(--white-silk); margin-bottom: 2.5rem; text-align: left; letter-spacing: 0.1em; }
+        .summary-details { margin-bottom: 4rem; }
+        .summary-item { display: flex; justify-content: space-between; font-size: 0.85rem; padding: 1.2rem 0; border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
+        .summary-item span { color: var(--gray-subtle); text-transform: uppercase; letter-spacing: 0.1em; }
+        .summary-item strong { color: var(--gold-pure); font-weight: 500; }
+        .btn-booking-confirm { width: 100%; text-align: center; }
+
+        @media (max-width: 900px) {
+            .booking-ui { flex-direction: column; }
+            .booking-summary-area { border-left: none; border-top: 1px solid var(--border-gold); }
+        }
+
+        /* --- Équipe Section --- */
+        #equipe { padding: 140px 0; background: #030303; }
+        
+        .equipe-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; }
+        
+        .equipe-card { border: 1px solid var(--border-gold); border-radius: 12px; background: var(--black-card); padding: 3rem 2rem; text-align: center; transition: var(--transition-luxe); }
+        .equipe-card:hover { border-color: var(--gold-pure); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.05); }
+        
+        .equipe-img-container { width: 180px; height: 180px; margin: 0 auto 2.5rem auto; border-radius: 50%; overflow: hidden; border: 1px solid var(--gold-pure); padding: 6px; }
+        .equipe-img-container img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+
+        .equipe-info h4 { font-size: 1.5rem; color: var(--white-silk); margin-bottom: 0.5rem; }
+        .equipe-info p { color: var(--gold-pure); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 2rem; }
+        
+        .equipe-specialites { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; }
+        .spec-tag { font-size: 0.7rem; color: var(--gray-subtle); padding: 5px 15px; border: 1px solid rgba(212, 175, 55, 0.1); border-radius: 50px; text-transform: uppercase; letter-spacing: 0.1em; }
+
+        /* --- Témoignages Section --- */
+        #temoignages { padding: 140px 0; }
+        
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; }
+        
+        .testimonial-card { border: 1px solid var(--border-gold); border-radius: 12px; background: var(--black-card); padding: 3.5rem; display: flex; flex-direction: column; justify-content: space-between; }
+        
+        .stars { color: var(--gold-pure); font-size: 0.8rem; margin-bottom: 2rem; letter-spacing: 0.2em; }
+        
+        .testimonial-card p { font-size: 0.9rem; font-weight: 300; color: var(--white-silk); margin-bottom: 2.5rem; line-height: 1.9; opacity: 0.95; }
+        
+        .client-info { display: flex; align-items: center; gap: 1.2rem; }
+        .client-avatar { width: 44px; height: 44px; border: 1px solid var(--gold-pure); color: var(--gold-pure); display: flex; align-items: center; justify-content: center; font-weight: 600; border-radius: 50%; font-size: 0.9rem; font-family: var(--font-serif); }
+        .client-name { font-size: 0.9rem; font-weight: 500; color: var(--white-silk); letter-spacing: 0.05em; }
+        .client-name span { display: block; font-size: 0.75rem; color: var(--gold-pure); text-transform: uppercase; letter-spacing: 0.15em; margin-top: 0.2rem; }
+
+        /* --- Contact Section --- */
+        #contact { padding: 140px 0; background: #030303; }
+        
+        .contact-ui { display: flex; gap: 4rem; }
+        .contact-info-area { flex: 1.2; }
+        .contact-map-area { flex: 1.8; border: 1px solid var(--border-gold); border-radius: 12px; overflow: hidden; min-height: 450px; position: relative; }
+        
+        .info-block { margin-bottom: 3.5rem; }
+        .info-block h4 { font-size: 0.8rem; color: var(--gold-pure); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 1.5rem; font-family: var(--font-sans); font-weight: 600; }
+        
+        .contact-details-list { list-style: none; }
+        .contact-details-list li { display: flex; align-items: flex-start; gap: 1.2rem; font-size: 0.85rem; color: var(--white-silk); margin-bottom: 1.2rem; font-weight: 300; }
+        .contact-details-list i { color: var(--gold-pure); font-size: 1.1rem; }
+
+        .social-links { display: flex; gap: 1.5rem; margin-top: 1.5rem; }
+        .social-links a { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-gold); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: var(--gray-subtle); transition: var(--transition-luxe); }
+        .social-links a:hover { color: #000; background: var(--gold-gradient); border-color: transparent; transform: translateY(-3px); box-shadow: 0 5px 15px var(--gold-glow); }
+
+        .map-maquette { width: 100%; height: 100%; background: #080706; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; padding: 2rem; }
+        .map-maquette i { font-size: 3rem; color: var(--gold-pure); margin-bottom: 1.5rem; }
+        .map-maquette span { color: var(--white-silk); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.2em; margin-bottom: 0.5rem; }
+        .map-maquette p { color: var(--gray-subtle); font-size: 0.75rem; }
+
+        @media (max-width: 900px) {
+            .contact-ui { flex-direction: column; }
+            .contact-map-area { min-height: 350px; }
+        }
+
+        /* --- Footer --- */
+        footer { padding: 8rem 0 4rem 0; text-align: center; border-top: 1px solid var(--border-gold); background: #020202; position: relative; }
+        
+        .footer-logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo-silhouette {
+            width: 60px;
+            height: 60px;
+            background: var(--gold-gradient);
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50,15 C45,8 55,8 50,15 Z M38,20 L42,27 L50,18 L58,27 L62,20 L58,32 L42,32 Z M50,30 C30,30 25,48 35,62 C38,66 42,65 40,72 C36,85 52,95 62,88 C55,85 53,78 57,75 C68,65 70,45 50,30 Z'/%3E%3C/svg%3E") no-repeat center/contain;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50,15 C45,8 55,8 50,15 Z M38,20 L42,27 L50,18 L58,27 L62,20 L58,32 L42,32 Z M50,30 C30,30 25,48 35,62 C38,66 42,65 40,72 C36,85 52,95 62,88 C55,85 53,78 57,75 C68,65 70,45 50,30 Z'/%3E%3C/svg%3E") no-repeat center/contain;
+            filter: drop-shadow(0 0 10px var(--gold-glow));
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo-text {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        
+        .footer-logo-cursive {
+            font-family: var(--font-cursive);
+            font-size: 2rem;
+            color: var(--gold-pure);
+            margin-top: -10px;
+        }
+
+        .footer-slogan { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--white-silk); opacity: 0.6; margin-bottom: 4rem; margin-top: 1rem; }
+        
+        .footer-nav ul { display: flex; justify-content: center; gap: 3rem; margin-bottom: 4rem; flex-wrap: wrap; list-style: none; }
+        .footer-nav a { font-size: 0.75rem; color: var(--gray-subtle); text-transform: uppercase; letter-spacing: 0.2em; }
+        .footer-nav a:hover { color: var(--white-silk); }
+        
+        .copyright { font-size: 0.7rem; color: var(--gray-subtle); letter-spacing: 0.1em; text-transform: uppercase; }
+        .copyright a { color: var(--gold-pure); font-weight: 500; }
+
+        /* --- Animations --- */
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+    </style>
+</head>
+<body>
+
+    <!-- Lightbox de la Galerie -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img src="" alt="Zoom" id="lightbox-img">
+    </div>
+
+    <!-- Header / Nav -->
+    <header id="main-header">
+        <div class="container nav-container">
+            <div class="logo-container" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <div class="logo-silhouette"></div>
+                <div class="logo-text-group">
+                    <span class="logo-brand">FASHION CODE</span>
+                    <span class="logo-sub">PRESTIGE BEAUTÉ</span>
+                </div>
+            </div>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="#prestations">Prestations</a></li>
+                    <li><a href="#galerie">Réalisations</a></li>
+                    <li><a href="#formations">Formations</a></li>
+                    <li><a href="#temoignages">Témoignages</a></li>
+                    <li><a href="#equipe">L'Équipe</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#reservation" class="btn-outline" style="padding: 0.8rem 2rem; font-size: 0.7rem;">Réserver</a>
+            <button class="mobile-nav-toggle" id="mobile-nav-toggle"><i class="bi bi-list"></i></button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div id="hero-content">
+            <div class="brand-title-luxury">
+                <span class="brand-title-top">FASHION</span>
+                <span class="brand-title-bottom">Code</span>
+            </div>
+            <h1>Révélez la meilleure version de vous-même.</h1>
+            <div class="hero-btns">
+                <a href="#reservation" class="btn-gold">Prendre rendez-vous</a>
+                <a href="#formations" class="btn-outline">Découvrir nos formations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prestations Section -->
+    <section id="prestations" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos Prestations</h2>
+                <p class="section-subtitle">L'Excellence de la Beauté Tout-En-1</p>
+                <div class="gold-line"></div>
+            </div>
+            
+            <div class="grid-prestations">
+                <!-- Dynamique en JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerie Section -->
+    <section id="galerie" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Les Signatures</h2>
+                <p class="section-subtitle">Nos Chefs-d'Œuvre Récents</p>
+                <div class="gold-line"></div>
+            </div>
+            
+            <div class="galerie-filters">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="tresses">Tresses</button>
+                <button class="filter-btn" data-filter="visage">Visage</button>
+                <button class="filter-btn" data-filter="ongles">Ongles</button>
+            </div>
+            
+            <div class="galerie-grid">
+                <!-- Dynamique en JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Avant / Après -->
+    <section id="comparateur" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">La Métamorphose</h2>
+                <p class="section-subtitle">Rien n'est plus parlant que le résultat</p>
+                <div class="gold-line"></div>
+            </div>
+            
+            <div class="comp-container">
+                <div class="comp-image comp-before">
+                    <span class="comp-label before">Avant</span>
+                </div>
+                <div class="comp-image comp-after" id="comp-after">
+                    <span class="comp-label after">Après</span>
+                </div>
+                <div class="comp-handle" id="comp-handle">
+                    <div class="comp-circle"><i class="bi bi-arrow-left-right"></i></div>
+                </div>
+                <input type="range" min="0" max="100" value="50" class="comp-slider" id="comp-slider">
+            </div>
+        </div>
+    </section>
+
+    <!-- Formations Section -->
+    <section id="formations" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">L'Académie</h2>
+                <p class="section-subtitle">Nos Formations dans Différents Modules</p>
+                <div class="gold-line"></div>
+            </div>
+            
+            <div class="formations-list">
+                <div class="formation-card">
+                    <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=400&auto=format&fit=crop" alt="Formation Tresses">
+                    <div class="formation-details">
+                        <div class="formation-meta">
+                            <span><i class="bi bi-clock"></i> 6 Semaines</span>
+                            <span><i class="bi bi-award"></i> Certifiant</span>
+                        </div>
+                        <h3>Art & Maîtrise des Tresses</h3>
+                        <p>Apprenez les gestes d'élite pour concevoir et exécuter des tresses d'art (Box Braids, Cornrows haut de gamme) dans un cadre chaleureux et professionnel.</p>
+                    </div>
+                    <div class="formation-action">
+                        <a href="#contact" class="btn-outline">S'informer</a>
+                    </div>
+                </div>
+                
+                <div class="formation-card">
+                    <img src="https://images.unsplash.com/photo-1627914436573-0498b0f8071e?q=80&w=400&auto=format&fit=crop" alt="Formation Onglerie">
+                    <div class="formation-details">
+                        <div class="formation-meta">
+                            <span><i class="bi bi-clock"></i> 4 Semaines</span>
+                            <span><i class="bi bi-award"></i> Perfectionnement</span>
+                        </div>
+                        <h3>Stylisme Ongulaire de Prestige</h3>
+                        <p>Formez-vous aux protocoles rigoureux de la manucure d'art, du modelage gel et du Nail Art haute couture pour satisfaire une clientèle exigeante.</p>
+                    </div>
+                    <div class="formation-action">
+                        <a href="#contact" class="btn-outline">S'informer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Réservation Section -->
+    <section id="reservation" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Votre Réservation</h2>
+                <p class="section-subtitle">Un Instant Privé de Pur Prestige</p>
+                <div class="gold-line"></div>
+            </div>
+            
+            <div class="booking-ui">
+                <div class="booking-form-area">
+                    <div class="booking-step">
+                        <h4 class="form-section-title">1. Sélection de la Prestation</h4>
+                        <div class="service-selection">
+                            <div class="booking-item selected"><i class="bi bi-scissors"></i><span>Tresses & Coiffure</span></div>
+                            <div class="booking-item"><i class="bi bi-stars"></i><span>Maquillage & Cils</span></div>
+                            <div class="booking-item"><i class="bi bi-gem"></i><span>Onglerie & Manucure</span></div>
+                            <div class="booking-item"><i class="bi bi-eye"></i><span>Microblading & Sourcils</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-step">
+                        <h4 class="form-section-title">2. Votre Experte</h4>
+                        <div class="service-selection">
+                            <div class="booking-item"><i class="bi bi-person"></i><span>Grace (Tresses)</span></div>
+                            <div class="booking-item selected"><i class="bi bi-person"></i><span>Awa (Esthétique)</span></div>
+                        </div>
+                    </div>
+
+                    <div class="booking-step">
+                        <h4 class="form-section-title">3. Date & Heure</h4>
+                        <div class="date-time-selection">
+                            <div class="booking-item selected"><span>Aujourd'hui</span></div>
+                            <div class="booking-item selected"><span>14:30</span></div>
+                        </div>
+                    </div>
+
+                    <div class="booking-step">
+                        <h4 class="form-section-title">4. Demande Spécifique</h4>
+                        <textarea placeholder="Décrivez votre projet esthétique ou vos préférences particulières..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="booking-summary-area">
+                    <div class="booking-summary">
+                        <h3>Détail</h3>
+                        <div class="summary-details">
+                            <div class="summary-item"><span>Prestation</span><strong>Tresses & Coiffure</strong></div>
+                            <div class="summary-item"><span>Experte</span><strong>Grace</strong></div>
+                            <div class="summary-item"><span>Créneau</span><strong>Aujourd'hui — 14:30</strong></div>
+                        </div>
+                        <a href="https://wa.me/2290196634054" target="_blank" class="btn-gold btn-booking-confirm"><i class="bi bi-whatsapp"></i> Envoyer sur WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Équipe Section -->
+    <section id="equipe" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos Spécialistes</h2>
+                <p class="section-subtitle">Confiez votre beauté à des professionnelles passionnées</p>
+                <div class="gold-line"></div>
+            </div>
+            
+            <div class="equipe-grid">
+                <!-- Dynamique en JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages Section -->
+    <section id="temoignages" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Leurs Éloges</h2>
+                <p class="section-subtitle">Votre satisfaction est notre signature</p>
+                <div class="gold-line"></div>
+            </div>
+            
+            <div class="testimonials-grid">
+                <!-- Dynamique en JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nous Rendre Visite</h2>
+                <p class="section-subtitle">Votre écrin de détente à Parakou</p>
+                <div class="gold-line"></div>
+            </div>
+            
+            <div class="contact-ui">
+                <div class="contact-info-area">
+                    <div class="info-block">
+                        <h4>Contact Rapide</h4>
+                        <ul class="contact-details-list">
+                            <li><i class="bi bi-telephone-outbound"></i>+229 01 96 63 40 54</li>
+                            <li><i class="bi bi-whatsapp"></i><a href="https://wa.me/2290196634054" target="_blank" style="color: var(--gold-pure);">Discuter directement sur WhatsApp</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-block">
+                        <h4>Horaires d'Ouverture</h4>
+                        <ul class="contact-details-list">
+                            <li><i class="bi bi-calendar-check"></i>Mardi à Dimanche : 08H00 - 19H00</li>
+                            <li><i class="bi bi-x-circle" style="color: #da1b60;"></i>Lundi : Fermé</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-block">
+                        <h4>Localisation</h4>
+                        <p class="contact-details-list" style="font-weight: 300; line-height: 1.8;">
+                            <i class="bi bi-geo-alt"></i>
+                            Quartier Gah, dans la Von collée à la Pharmacie des 3 banques. Dernière boutique à gauche juste avant le tout premier carrefour. Parakou, Bénin.
+                        </p>
+                    </div>
+
+                    <div class="info-block">
+                        <h4>Notre Communauté</h4>
+                        <div class="social-links">
+                            <a href="https://instagram.com/fashioncode_bj" target="_blank"><i class="bi bi-instagram"></i></a>
+                            <a href="https://facebook.com/fashioncode_bj" target="_blank"><i class="bi bi-facebook"></i></a>
+                            <a href="https://tiktok.com/@fashioncode_bj" target="_blank"><i class="bi bi-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-map-area">
+                    <div class="map-maquette">
+                        <i class="bi bi-geo-alt-fill" style="filter: drop-shadow(0 0 10px var(--gold-glow));"></i>
+                        <span>FASHION CODE</span>
+                        <p>Quartier Gah, Parakou, Bénin</p>
+                        <p style="font-size: 0.65rem; margin-top: 1.5rem; opacity: 0.5; letter-spacing: 0.2em;">MAQUETTE INTERACTIVE GOOGLE MAPS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo-container">
+                <div class="footer-logo-silhouette"></div>
+                <span class="footer-logo-text">FASHION CODE</span>
+                <span class="footer-logo-cursive">Prestige</span>
+            </div>
+            <p class="footer-slogan">Révélez la meilleure version de vous-même</p>
+            
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#prestations">Prestations</a></li>
+                    <li><a href="#galerie">Réalisations</a></li>
+                    <li><a href="#formations">Académie</a></li>
+                    <li><a href="#reservation">Rendez-vous</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <p class="copyright">&copy; 2026 Fashion Code Parakou. Tous droits réservés. Design par <a href="https://github.com/coco98-ff" target="_blank">Irèx Nicole HOUANSOU</a>.</p>
+        </div>
+    </footer>
+
+    <!-- Logique JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Effet d'en-tête transparent -> opaque
+            const header = document.getElementById('main-header');
+            window.addEventListener('scroll', () => {
+                header.classList.toggle('scrolled', window.scrollY > 50);
+            });
+
+            // Toggle menu mobile
+            const mobileToggle = document.getElementById('mobile-nav-toggle');
+            const mainNav = document.getElementById('main-nav');
+            mobileToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+            });
+            document.querySelectorAll('#main-nav a').forEach(link => { 
+                link.addEventListener('click', () => { mainNav.classList.remove('active'); }); 
+            });
+
+            // Génération dynamique des prestations (basé sur ton affiche officielle)
+            const prestationsList = [
+                { title: 'Tresses & Coiffures', desc: 'Box braids, nattes collées artistiques et coiffures d\'art graphique exécutées par des mains expertes.', img: 'https://images.unsplash.com/photo-1616165415772-870d0617387a?w=500' },
+                { title: 'Esthétique & Maquillage', desc: 'Mise en beauté professionnelle, maquillage de cérémonie et teint zéro défaut adapté à toutes les carnations.', img: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=500' },
+                { title: 'Pose de Perruques', desc: 'Pose professionnelle et ventes de perruques de qualité supérieure avec finitions ultra-réalistes.', img: 'https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=500' },
+                { title: 'Stylisme Ongulaire', desc: 'Manucure, pédicure de précision, pose de vernis et Nail Art soigné pour parfaire votre style.', img: 'https://images.unsplash.com/photo-1627914436573-0498b0f8071e?w=500' },
+                { title: 'Regard Sublime', desc: 'Extensions de cils d\'exception (méthode cil-à-cil ou volume russe) et structuration des sourcils.', img: 'https://images.unsplash.com/photo-1622370788094-1a9bf7f94bb6?w=500' },
+                { title: 'Attache Foulards', desc: 'L\'art traditionnel et moderne du foulard magnifié pour vos soirées et grands événements.', img: 'https://images.unsplash.com/photo-1601625470125-96bd14b2d354?w=500' }
+            ];
+
+            const prestationsGrid = document.querySelector('.grid-prestations');
+            prestationsList.forEach((prestation) => {
+                prestationsGrid.innerHTML += `
+                    <div class="prestation-card reveal">
+                        <div class="prestation-img-wrapper">
+                            <img src="${prestation.img}" alt="${prestation.title}">
+                        </div>
+                        <div class="prestation-card-info">
+                            <div>
+                                <h3>${prestation.title}</h3>
+                                <p>${prestation.desc}</p>
+                            </div>
+                            <a href="#reservation" class="btn-card-reserve">En savoir plus <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Galerie d'art
+            const galerieData = [
+                { id: 1, cat: 'tresses', img: 'https://images.unsplash.com/photo-1616165415772-870d0617387a?w=500' },
+                { id: 2, cat: 'visage', img: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=500' },
+                { id: 3, cat: 'ongles', img: 'https://images.unsplash.com/photo-1627914436573-0498b0f8071e?w=500' },
+                { id: 4, cat: 'tresses', img: 'https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=500' },
+                { id: 5, cat: 'visage', img: 'https://images.unsplash.com/photo-1622370788094-1a9bf7f94bb6?w=500' },
+                { id: 6, cat: 'ongles', img: 'https://images.unsplash.com/photo-1620601323315-9989b52a4e21?w=500' }
+            ];
+
+            const galerieGrid = document.querySelector('.galerie-grid');
+            galerieData.forEach(item => {
+                galerieGrid.innerHTML += `
+                    <div class="galerie-item ${item.cat} show" data-id="${item.id}" data-cat="${item.cat}">
+                        <img src="${item.img}" alt="Création ${item.id}">
+                    </div>
+                `;
+            });
+
+            // Équipe
+            const equipeData = [
+                { name: 'Grace', pos: 'Spécialiste Tresses & Coiffures', img: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=300', specs: ['Tresses Artistiques', 'Pose Perruque', 'Attache Foulard'] },
+                { name: 'Awa', pos: 'Esthéticienne & Nail-Artist', img: 'https://images.unsplash.com/photo-1521119989659-a83eee488004?w=300', specs: ['Maquillage HD', 'Manucure Russe', 'Extensions Cils'] }
+            ];
+
+            const equipeGrid = document.querySelector('.equipe-grid');
+            equipeData.forEach(member => {
+                let specsHtml = member.specs.map(s => `<span class="spec-tag">${s}</span>`).join('');
+                equipeGrid.innerHTML += `
+                    <div class="equipe-card reveal">
+                        <div class="equipe-img-container">
+                            <img src="${member.img}" alt="${member.name}">
+                        </div>
+                        <div class="equipe-info">
+                            <h4>${member.name}</h4>
+                            <p>${member.pos}</p>
+                            <div class="equipe-specialites">${specsHtml}</div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Témoignages réels
+            const testimonialsData = [
+                { name: 'Marie-Axelle', initial: 'M', city: 'Parakou', text: 'Un cadre d\'un chic exceptionnel et un professionnalisme incroyable ! Mes nattes n\'ont jamais été aussi nettes et sans douleur.' },
+                { name: 'Audrey', initial: 'A', city: 'Parakou', text: 'L\'adresse incontournable. De l\'onglerie fine aux tresses complexes, tout est parfait ! Et l\'accueil est si chaleureux.' }
+            ];
+
+            const testimonialsGrid = document.querySelector('.testimonials-grid');
+            testimonialsData.forEach(item => {
+                testimonialsGrid.innerHTML += `
+                    <div class="testimonial-card reveal">
+                        <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                        <p>" ${item.text} "</p>
+                        <div class="client-info">
+                            <div class="client-avatar">${item.initial}</div>
+                            <div class="client-name">${item.name} <span>${item.city}</span></div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Filtres Galerie
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galerieItems = document.querySelectorAll('.galerie-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    const filter = e.target.getAttribute('data-filter');
+
+                    galerieItems.forEach(item => {
+                        item.classList.remove('show');
+                        setTimeout(() => {
+                            if (filter === 'all' || item.getAttribute('data-cat') === filter) {
+                                item.style.display = 'block';
+                                setTimeout(() => { item.classList.add('show'); }, 10);
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        }, 300);
+                    });
+                });
+            });
+
+            // Lightbox Zoom
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxClose = document.getElementById('lightbox-close');
+
+            galerieGrid.addEventListener('click', (e) => {
+                const clickedItem = e.target.closest('.galerie-item');
+                if (clickedItem) {
+                    const imgSrc = clickedItem.querySelector('img').getAttribute('src');
+                    lightboxImg.setAttribute('src', imgSrc);
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+
+            const closeLightbox = () => { lightbox.classList.remove('active'); document.body.style.overflow = ''; };
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+
+            // Slider Avant/Après
+            const compSlider = document.getElementById('comp-slider');
+            const compAfter = document.getElementById('comp-after');
+            const compHandle = document.getElementById('comp-handle');
+
+            compSlider.addEventListener('input', (e) => {
+                const sliderPos = e.target.value;
+                compAfter.style.width = `${sliderPos}%`;
+                compHandle.style.left = `${sliderPos}%`;
+            });
+
+            // Sélection dynamique de la réservation
+            const bookingItems = document.querySelectorAll('.booking-item');
+            bookingItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const group = item.closest('.service-selection, .date-time-selection');
+                    group.querySelectorAll('.booking-item').forEach(bi => bi.classList.remove('selected'));
+                    item.classList.add('selected');
+                });
+            });
+
+            // Effet d'apparition au défilement (Scroll Reveal)
+            const reveals = document.querySelectorAll('.reveal');
+            const revealOnScroll = () => {
+                for (let i = 0; i < reveals.length; i++) {
+                    let windowHeight = window.innerHeight;
+                    let elementTop = reveals[i].getBoundingClientRect().top;
+                    let elementVisible = 150;
+
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveals[i].classList.add('active');
+                    }
+                }
+            };
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll();
+        });
+    </script>
+</body>
+</html>
