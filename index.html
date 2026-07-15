@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Code | L'Art de la Haute Beauté</title>
+    <meta name="description" content="Découvrez Fashion Code, votre salon de beauté de prestige à Parakou. Tresses d'art, soins d'exception et formations exclusives.">
+    
+    <!-- Typographies de Luxe -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icônes -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        :root {
+            --bg-deep: radial-gradient(circle at center, #110e0a 0%, #050505 100%);
+            --black-card: #0c0a08;
+            --gold-gradient: linear-gradient(135deg, #b38728 0%, #fbf5b7 25%, #da1b60 50%, #fbf5b7 75%, #aa771c 100%);
+            --gold-pure: #d4af37;
+            --gold-light: #f3e5ab;
+            --white-silk: #f5f4f0;
+            --gray-subtle: #8a857f;
+            --border-gold-glow: rgba(212, 175, 55, 0.15);
+            --transition-luxe: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            
+            --font-serif: 'Cinzel', serif;
+            --font-sans: 'Montserrat', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        body {
+            background: #050505;
+            background-image: var(--bg-deep);
+            color: var(--white-silk);
+            font-family: var(--font-sans);
+            overflow-x: hidden;
+            line-height: 1.7;
+            letter-spacing: 0.03em;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            font-weight: 400;
+            letter-spacing: 0.15em;
+        }
+
+        a { text-decoration: none; color: inherit; transition: var(--transition-luxe); }
+        img { max-width: 100%; display: block; filter: grayscale(15%) contrast(105%); }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 8%;
+        }
+
+        /* --- Éléments Signature (Luxe) --- */
+        .section-header {
+            text-align: center;
+            margin-bottom: 6rem;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            background: linear-gradient(180deg, #ffffff 0%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--gold-pure);
+            letter-spacing: 0.3em;
+            font-weight: 300;
+        }
+
+        .gold-line {
+            width: 60px;
+            height: 1px;
+            background: var(--gold-gradient);
+            margin: 2rem auto 0 auto;
+        }
+
+        /* Boutons Couture */
+        .btn-gold {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--gold-gradient);
+            color: #000;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            border-radius: 0px;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.15);
+        }
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            filter: brightness(1.1);
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            border: 1px solid var(--gold-pure);
+            color: var(--gold-pure);
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            background: transparent;
+        }
+        .btn-outline:hover {
+            background: rgba(212, 175, 55, 0.05);
+            border-color: var(--white-silk);
+            color: var(--white-silk);
+            transform: translateY(-3px);
+        }
+
+        /* --- Header --- */
+        header {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            padding: 2rem 0;
+            z-index: 1000;
+            transition: var(--transition-luxe);
+            border-bottom: 1px solid transparent;
+        }
+        header.scrolled {
+            padding: 1.2rem 0;
+            background: rgba(5, 5, 5, 0.95);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border-gold-glow);
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        
+        .logo-fc {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold-pure);
+            letter-spacing: 0.1em;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+        }
+
+        .main-nav ul { display: flex; gap: 2.5rem; }
+        .main-nav a {
+            font-size: 0.75rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--gray-subtle);
+        }
+        .main-nav a:hover { color: var(--gold-pure); }
+
+        .mobile-nav-toggle { display: none; color: var(--gold-pure); font-size: 1.8rem; }
+
+        @media (max-width: 1024px) {
+            .main-nav { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: #0c0a08; padding: 3rem 8%; border-bottom: 1px solid var(--border-gold-glow); flex-direction: column; text-align: center; }
+            .main-nav.active { display: flex; }
+            .main-nav ul { flex-direction: column; gap: 2rem; }
+            .mobile-nav-toggle { display: block; }
+            header .btn-outline { display: none; }
+        }
+
+        /* --- Hero Section --- */
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1616165415772-870d0617387a?q=80&w=2560&auto=format&fit=crop') no-repeat center center/cover;
+            text-align: center;
+        }
+        
+        #hero-content { opacity: 0; transform: translateY(40px); animation: fadeInUp 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s; }
+        #hero .logo-text { font-family: var(--font-serif); color: var(--gold-pure); font-size: 6rem; line-height: 1.1; margin-bottom: 1rem; letter-spacing: 0.2em; text-transform: uppercase; }
+        @media (max-width: 768px) { #hero .logo-text { font-size: 3.5rem; } }
+
+        #hero h1 { font-family: var(--font-sans); font-size: 1rem; font-weight: 300; margin-bottom: 4rem; text-transform: uppercase; letter-spacing: 0.4em; color: var(--white-silk); opacity: 0.8; }
+        
+        .hero-btns { display: flex; gap: 2rem; justify-content: center; }
+        @media (max-width: 768px) { .hero-btns { flex-direction: column; gap: 1rem; padding: 0 10%; } }
+
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+
+        /* --- Prestations Section --- */
+        #prestations { padding: 140px 0; }
+        
+        .grid-prestations {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .prestation-card {
+            background: var(--black-card);
+            border: 1px solid var(--border-gold-glow);
+            position: relative;
+            transition: var(--transition-luxe);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .prestation-img-wrapper {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .prestation-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-luxe);
+        }
+        
+        .prestation-card:hover img {
+            transform: scale(1.08);
+            filter: grayscale(0%) contrast(100%);
+        }
+
+        .prestation-card-info {
+            padding: 2.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+        
+        /* Subtle glow effect on hover */
+        .prestation-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid transparent;
+            transition: var(--transition-luxe);
+            pointer-events: none;
+        }
+        .prestation-card:hover::after {
+            border-color: var(--gold-pure);
+            box-shadow: inset 0 0 15px rgba(212, 175, 55, 0.1);
+        }
+
+        .prestation-card-info h3 {
+            font-size: 1.5rem;
+            color: var(--white-silk);
+            margin-bottom: 1rem;
+            letter-spacing: 0.1em;
+            transition: var(--transition-luxe);
+        }
+        .prestation-card:hover h3 { color: var(--gold-pure); }
+        
+        .prestation-card-info p {
+            font-size: 0.85rem;
+            color: var(--gray-subtle);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+        
+        .btn-card-reserve {
+            font-size: 0.75rem;
+            color: var(--gold-pure);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            align-self: flex-start;
+        }
+        .btn-card-reserve i { transition: transform 0.4s ease; }
+        .prestation-card:hover .btn-card-reserve i { transform: translateX(8px); }
+
+        /* --- Galerie Section --- */
+        #galerie { padding: 140px 0; background: #030303; }
+        
+        .galerie-filters { display: flex; justify-content: center; gap: 2rem; margin-bottom: 5rem; overflow-x: auto; padding-bottom: 1rem; }
+        .filter-btn { font-family: var(--font-sans); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--gray-subtle); padding: 0.5rem 0; position: relative; font-weight: 400; }
+        .filter-btn::after { content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 1px; background: var(--gold-gradient); transition: var(--transition-luxe); transform: translateX(-50%); }
+        .filter-btn.active, .filter-btn:hover { color: var(--white-silk); }
+        .filter-btn.active::after { width: 80%; }
+
+        .galerie-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        @media (max-width: 900px) { .galerie-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .galerie-grid { grid-template-columns: repeat(1, 1fr); } }
+
+        .galerie-item { overflow: hidden; position: relative; cursor: pointer; aspect-ratio: 1; opacity: 0; transform: scale(0.95); transition: var(--transition-luxe); border: 1px solid var(--border-gold-glow); }
+        .galerie-item.show { opacity: 1; transform: scale(1); }
+        .galerie-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .galerie-item:hover img { transform: scale(1.05); }
+        
+        .galerie-item::before {
+            content: '\F629';
+            font-family: bootstrap-icons;
+            position: absolute;
+            inset: 0;
+            background: rgba(5, 5, 5, 0.7);
+            color: var(--gold-pure);
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition-luxe);
+            z-index: 1;
+        }
+        .galerie-item:hover::before { opacity: 1; }
+
+        /* Lightbox */
+        .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(5,5,5,0.98); z-index: 2000; display: none; align-items: center; justify-content: center; opacity: 0; transition: var(--transition-luxe); }
+        .lightbox.active { display: flex; opacity: 1; }
+        .lightbox img { max-width: 85%; max-height: 85%; border: 1px solid var(--border-gold-glow); box-shadow: 0 0 50px rgba(0,0,0,0.8); }
+        .lightbox-close { position: absolute; top: 30px; right: 40px; color: var(--gold-pure); font-size: 2.5rem; cursor: pointer; }
+
+        /* --- Avant/Après Section --- */
+        #comparateur { padding: 140px 0; }
+        
+        .comp-container { width: 100%; max-width: 1000px; margin: 0 auto; aspect-ratio: 16/10; position: relative; overflow: hidden; border: 1px solid var(--border-gold-glow); }
+        
+        .comp-image { width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-size: cover; background-position: center; }
+        .comp-before { background-image: url('https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=1200&auto=format&fit=crop'); }
+        .comp-after { background-image: url('https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=1200&auto=format&fit=crop&sepia=1&hue=180&saturation=1.5'); z-index: 2; width: 50%; border-right: 1px solid var(--gold-pure); }
+        
+        .comp-label { position: absolute; bottom: 30px; color: var(--white-silk); background: rgba(0,0,0,0.8); padding: 8px 20px; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; z-index: 3; border: 1px solid var(--border-gold-glow); }
+        .comp-label.before { left: 30px; }
+        .comp-label.after { right: 30px; }
+
+        .comp-handle { position: absolute; top: 0; left: 50%; transform: translateX(-50%); height: 100%; width: 2px; background: var(--gold-pure); z-index: 4; display: flex; align-items: center; justify-content: center; }
+        .comp-circle { position: absolute; width: 44px; height: 44px; border-radius: 50%; background: #0c0a08; border: 1px solid var(--gold-pure); color: var(--gold-pure); display: flex; align-items: center; justify-content: center; font-size: 1rem; box-shadow: 0 0 20px rgba(0,0,0,0.8); }
+
+        .comp-slider { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5; -webkit-appearance: none; background: none; opacity: 0; cursor: col-resize; }
+
+        /* --- Formations Section --- */
+        #formations { padding: 140px 0; background: #030303; }
+        
+        .formation-card {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--border-gold-glow);
+            background: var(--black-card);
+            padding: 4rem;
+            margin-bottom: 2rem;
+            transition: var(--transition-luxe);
+        }
+        .formation-card:hover { border-color: var(--gold-pure); transform: translateY(-4px); }
+        .formation-card img { width: 220px; height: 220px; object-fit: cover; border: 1px solid var(--border-gold-glow); flex-shrink: 0; }
+        
+        .formation-details { margin-left: 4rem; flex-grow: 1; }
+        
+        .formation-meta { display: flex; gap: 2rem; color: var(--gold-pure); font-size: 0.75rem; font-weight: 300; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem; }
+        .formation-meta i { margin-right: 0.5rem; }
+        
+        .formation-details h3 { font-size: 1.8rem; margin-bottom: 1rem; color: var(--white-silk); }
+        .formation-details p { color: var(--gray-subtle); margin-bottom: 0; font-size: 0.9rem; font-weight: 300; line-height: 1.8; max-width: 800px; }
+        
+        .formation-action { flex-shrink: 0; margin-left: 4rem; }
+
+        @media (max-width: 900px) {
+            .formation-card { flex-direction: column; text-align: center; padding: 3rem 2rem; }
+            .formation-details { margin: 2.5rem 0; }
+            .formation-meta { justify-content: center; }
+            .formation-action { margin: 0; width: 100%; }
+            .formation-action .btn-outline { width: 100%; }
+        }
+
+        /* --- Réservation Section (UI/UX Moderne) --- */
+        #reservation { padding: 140px 0; }
+        
+        .booking-ui { max-width: 1200px; margin: 0 auto; display: flex; border: 1px solid var(--border-gold-glow); background: var(--black-card); }
+        
+        .booking-form-area { flex: 1.8; padding: 4rem; }
+        .booking-summary-area { flex: 1.2; padding: 4rem; background: #050505; border-left: 1px solid var(--border-gold-glow); }
+        
+        .form-section-title { color: var(--gold-pure); text-transform: uppercase; letter-spacing: 0.20em; font-size: 0.8rem; margin-bottom: 2rem; padding-bottom: 0.8rem; border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
+
+        .service-selection, .date-time-selection { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 3rem; }
+        @media (max-width: 768px) { .service-selection, .date-time-selection { grid-template-columns: 1fr; } }
+        
+        .booking-item { padding: 1.5rem; border: 1px solid var(--border-gold-glow); cursor: pointer; transition: var(--transition-luxe); display: flex; flex-direction: column; align-items: flex-start; }
+        .booking-item i { color: var(--gold-pure); font-size: 1.4rem; margin-bottom: 1rem; }
+        .booking-item span { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--white-silk); }
+        
+        .booking-item:hover, .booking-item.selected { border-color: var(--gold-pure); background: rgba(212, 175, 55, 0.02); }
+        .booking-item.selected { box-shadow: inset 0 0 10px rgba(212, 175, 55, 0.05); }
+
+        textarea { width: 100%; padding: 1.5rem; background: #050505; border: 1px solid var(--border-gold-glow); color: var(--white-silk); font-family: var(--font-sans); font-size: 0.85rem; resize: vertical; min-height: 120px; }
+        textarea:focus { border-color: var(--gold-pure); }
+
+        .booking-summary h3 { font-size: 1.8rem; color: var(--white-silk); margin-bottom: 2.5rem; text-align: left; letter-spacing: 0.1em; }
+        .summary-details { margin-bottom: 4rem; }
+        .summary-item { display: flex; justify-content: space-between; font-size: 0.85rem; padding: 1.2rem 0; border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
+        .summary-item span { color: var(--gray-subtle); text-transform: uppercase; letter-spacing: 0.1em; }
+        .summary-item strong { color: var(--gold-pure); font-weight: 500; }
+        .btn-booking-confirm { width: 100%; text-align: center; }
+
+        @media (max-width: 900px) {
+            .booking-ui { flex-direction: column; }
+            .booking-summary-area { border-left: none; border-top: 1px solid var(--border-gold-glow); }
+        }
+
+        /* --- Équipe Section --- */
+        #equipe { padding: 140px 0; background: #030303; }
+        
+        .equipe-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; }
+        
+        .equipe-card { border: 1px solid var(--border-gold-glow); background: var(--black-card); padding: 3rem 2rem; text-align: center; transition: var(--transition-luxe); position: relative; }
+        .equipe-card:hover { border-color: var(--gold-pure); transform: translateY(-5px); }
+        
+        .equipe-img-container { width: 180px; height: 180px; margin: 0 auto 2.5rem auto; border-radius: 50%; overflow: hidden; border: 1px solid var(--gold-pure); padding: 6px; }
+        .equipe-img-container img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+
+        .equipe-info h4 { font-size: 1.6rem; color: var(--white-silk); margin-bottom: 0.5rem; }
+        .equipe-info p { color: var(--gold-pure); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 2rem; }
+        
+        .equipe-specialites { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; }
+        .spec-tag { font-size: 0.7rem; color: var(--gray-subtle); padding: 5px 15px; border: 1px solid rgba(212, 175, 55, 0.1); text-transform: uppercase; letter-spacing: 0.1em; }
+
+        /* --- Témoignages Section --- */
+        #temoignages { padding: 140px 0; }
+        
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; }
+        
+        .testimonial-card { border: 1px solid var(--border-gold-glow); background: var(--black-card); padding: 3.5rem; position: relative; display: flex; flex-direction: column; justify-content: space-between; }
+        
+        .stars { color: var(--gold-pure); font-size: 0.8rem; margin-bottom: 2rem; letter-spacing: 0.2em; }
+        
+        .testimonial-card p { font-size: 0.9rem; font-weight: 300; color: var(--white-silk); margin-bottom: 2.5rem; line-height: 1.9; opacity: 0.95; }
+        
+        .client-info { display: flex; align-items: center; gap: 1.2rem; }
+        .client-avatar { width: 44px; height: 44px; border: 1px solid var(--gold-pure); color: var(--gold-pure); display: flex; align-items: center; justify-content: center; font-weight: 600; border-radius: 50%; font-size: 0.9rem; font-family: var(--font-serif); }
+        .client-name { font-size: 0.9rem; font-weight: 500; color: var(--white-silk); letter-spacing: 0.05em; }
+        .client-name span { display: block; font-size: 0.75rem; color: var(--gold-pure); text-transform: uppercase; letter-spacing: 0.15em; margin-top: 0.2rem; }
+
+        /* --- Contact Section --- */
+        #contact { padding: 140px 0; background: #030303; }
+        
+        .contact-ui { display: flex; gap: 4rem; }
+        .contact-info-area { flex: 1.2; }
+        .contact-map-area { flex: 1.8; border: 1px solid var(--border-gold-glow); min-height: 450px; position: relative; }
+        
+        .info-block { margin-bottom: 3.5rem; }
+        .info-block h4 { font-size: 0.8rem; color: var(--gold-pure); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 1.5rem; font-family: var(--font-sans); font-weight: 600; }
+        
+        .contact-details-list li { display: flex; align-items: flex-start; gap: 1.2rem; font-size: 0.85rem; color: var(--white-silk); margin-bottom: 1.2rem; font-weight: 300; }
+        .contact-details-list i { color: var(--gold-pure); font-size: 1.1rem; }
+
+        .social-links { display: flex; gap: 2rem; margin-top: 1.5rem; }
+        .social-links a { font-size: 1.4rem; color: var(--gray-subtle); }
+        .social-links a:hover { color: var(--gold-pure); transform: translateY(-3px); }
+
+        .map-maquette { width: 100%; height: 100%; background: #080706; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; padding: 2rem; }
+        .map-maquette i { font-size: 3rem; color: var(--gold-pure); margin-bottom: 1.5rem; }
+        .map-maquette span { color: var(--white-silk); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.2em; margin-bottom: 0.5rem; }
+        .map-maquette p { color: var(--gray-subtle); font-size: 0.75rem; }
+
+        @media (max-width: 900px) {
+            .contact-ui { flex-direction: column; }
+            .contact-map-area { min-height: 350px; }
+        }
+
+        /* --- Footer --- */
+        footer { padding: 8rem 0 4rem 0; text-align: center; border-top: 1px solid var(--border-gold-glow); background: #020202; position: relative; }
+        
+        .footer-logo { font-family: var(--font-serif); color: var(--gold-pure); font-size: 4rem; margin-bottom: 1rem; letter-spacing: 0.1em; }
+        .footer-slogan { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--white-silk); opacity: 0.6; margin-bottom: 4rem; }
+        
+        .footer-nav ul { display: flex; justify-content: center; gap: 3rem; margin-bottom: 4rem; flex-wrap: wrap; }
+        .footer-nav a { font-size: 0.75rem; color: var(--gray-subtle); text-transform: uppercase; letter-spacing: 0.2em; }
+        .footer-nav a:hover { color: var(--white-silk); }
+        
+        .copyright { font-size: 0.7rem; color: var(--gray-subtle); letter-spacing: 0.1em; text-transform: uppercase; }
+        .copyright a { color: var(--gold-pure); font-weight: 500; }
+
+        /* --- Animations --- */
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+    </style>
+</head>
+<body>
+
+    <!-- Lightbox de la Galerie -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img src="" alt="Zoom" id="lightbox-img">
+    </div>
+
+    <!-- Header / Nav -->
+    <header id="main-header">
+        <div class="container nav-container">
+            <a href="#" class="logo-fc">FC</a>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="#prestations">Prestations</a></li>
+                    <li><a href="#galerie">Réalisations</a></li>
+                    <li><a href="#formations">Formations</a></li>
+                    <li><a href="#temoignages">Témoignages</a></li>
+                    <li><a href="#equipe">L'Équipe</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#reservation" class="btn-outline" style="padding: 0.8rem 2rem; font-size: 0.7rem;">Réserver</a>
+            <button class="mobile-nav-toggle" id="mobile-nav-toggle"><i class="bi bi-list"></i></button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div id="hero-content">
+            <div class="logo-text">Fashion Code</div>
+            <h1>Révélez la meilleure version de vous-même.</h1>
+            <div class="hero-btns">
+                <a href="#reservation" class="btn-gold">Prendre rendez-vous</a>
+                <a href="#formations" class="btn-outline">Découvrir nos formations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prestations Section -->
+    <section id="prestations" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">L'Art de la Haute Coiffure</h2>
+                <p class="section-subtitle">Prestations d'Excellence à Parakou</p>
+                <div class="gold-line"></div>
+            </div>
+            
+            <div class="grid-prestations">
+                <!-- Généré dynamiquement en JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerie Section -->
+    <section id="galerie" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Les Signatures</h2>
+                <p class="section-subtitle">Nos Réalisations d'Exception</p>
+                <div class="gold-line"></div>
+            </div>
+            
+            <div class="galerie-filters">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="tresses">Tresses</button>
+                <button class="filter-btn" data-filter="visage">Visage</button>
+                <button class="filter-btn" data-filter="ongles">Ongles</button>
+            </div>
+            
+            <div class="galerie-grid">
+                <!-- Généré dynamiquement en JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Avant / Après -->
+    <section id="comparateur" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">La Métamorphose</h2>
+                <p class="section-subtitle">L'Évidence du Savoir-Faire</p>
+                <div class="gold-line"></div>
+            </div>
+            
+            <div class="comp-container">
+                <div class="comp-image comp-before">
+                    <span class="comp-label before">Avant</span>
+                </div>
+                <div class="comp-image comp-after" id="comp-after">
+                    <span class="comp-label after">Après</span>
+                </div>
+                <div class="comp-handle" id="comp-handle">
+                    <div class="comp-circle"><i class="bi bi-arrow-left-right"></i></div>
+                </div>
+                <input type="range" min="0" max="100" value="50" class="comp-slider" id="comp-slider">
+            </div>
+        </div>
+    </section>
+
+    <!-- Formations Section -->
+    <section id="formations" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">L'Académie de l'Excellence</h2>
+                <p class="section-subtitle">Formez-vous aux Standards de Demain</p>
+                <div class="gold-line"></div>
+            </div>
+            
+            <div class="formations-list">
+                <div class="formation-card">
+                    <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=400&auto=format&fit=crop" alt="Formation Tresses">
+                    <div class="formation-details">
+                        <div class="formation-meta">
+                            <span><i class="bi bi-clock"></i> 6 Semaines</span>
+                            <span><i class="bi bi-award"></i> Perfectionnement</span>
+                        </div>
+                        <h3>Maîtrise des Tresses Artistiques</h3>
+                        <p>Apprenez l'art subtil des designs complexes (Box Braids, Cornrows haut de gamme) et l'art de préserver la santé du cheveu naturel. Une formation d'élite pour les futures leaders de la coiffure afro.</p>
+                    </div>
+                    <div class="formation-action">
+                        <a href="#contact" class="btn-outline">S'informer</a>
+                    </div>
+                </div>
+                
+                <div class="formation-card">
+                    <img src="https://images.unsplash.com/photo-1627914436573-0498b0f8071e?q=80&w=400&auto=format&fit=crop" alt="Formation Onglerie">
+                    <div class="formation-details">
+                        <div class="formation-meta">
+                            <span><i class="bi bi-clock"></i> 4 Semaines</span>
+                            <span><i class="bi bi-award"></i> Certifiant</span>
+                        </div>
+                        <h3>Stylisme Ongulaire & Nail Art de Luxe</h3>
+                        <p>Une immersion totale dans l'univers de la manucure russe de précision, du façonnage gel/acrylique et des techniques de Nail Art d'avant-garde.</p>
+                    </div>
+                    <div class="formation-action">
+                        <a href="#contact" class="btn-outline">S'informer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Réservation Section -->
+    <section id="reservation" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Votre Instant Privé</h2>
+                <p class="section-subtitle">Prenez Place dans l'Exception</p>
+                <div class="gold-line"></div>
+            </div>
+            
+            <div class="booking-ui">
+                <div class="booking-form-area">
+                    <div class="booking-step">
+                        <h4 class="form-section-title">1. Sélection de la Prestation</h4>
+                        <div class="service-selection">
+                            <div class="booking-item selected"><i class="bi bi-scissors"></i><span>Coiffure & Tresses</span></div>
+                            <div class="booking-item"><i class="bi bi-stars"></i><span>Maquillage & Cils</span></div>
+                            <div class="booking-item"><i class="bi bi-gem"></i><span>Onglerie & Manucure</span></div>
+                            <div class="booking-item"><i class="bi bi-brush"></i><span>Microblading</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-step">
+                        <h4 class="form-section-title">2. Votre Experte Beauté</h4>
+                        <div class="service-selection">
+                            <div class="booking-item"><i class="bi bi-person"></i><span>Grace (Tresses d'Art)</span></div>
+                            <div class="booking-item selected"><i class="bi bi-person"></i><span>Awa (Mise en beauté)</span></div>
+                        </div>
+                    </div>
+
+                    <div class="booking-step">
+                        <h4 class="form-section-title">3. Date & Horaire</h4>
+                        <div class="date-time-selection">
+                            <div class="booking-item selected"><span>Mardi 14 Octobre</span></div>
+                            <div class="booking-item selected"><span>14:30</span></div>
+                        </div>
+                    </div>
+
+                    <div class="booking-step">
+                        <h4 class="form-section-title">4. Note Particulière</h4>
+                        <textarea placeholder="Partagez vos préférences esthétiques avec notre experte..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="booking-summary-area">
+                    <div class="booking-summary">
+                        <h3>Le Détail</h3>
+                        <div class="summary-details">
+                            <div class="summary-item"><span>Prestation</span><strong>Maquillage & Cils</strong></div>
+                            <div class="summary-item"><span>Artiste</span><strong>Awa</strong></div>
+                            <div class="summary-item"><span>Rendez-vous</span><strong>Mardi 14 Octobre — 14:30</strong></div>
+                        </div>
+                        <a href="#" class="btn-gold btn-booking-confirm">Confirmer ma Demande</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Équipe Section -->
+    <section id="equipe" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Les Artisans de l'Élégance</h2>
+                <p class="section-subtitle">L'Excellence au Bout des Doigts</p>
+                <div class="gold-line"></div>
+            </div>
+            
+            <div class="equipe-grid">
+                <!-- Généré dynamiquement en JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages Section -->
+    <section id="temoignages" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Leurs Mots d'Éloges</h2>
+                <p class="section-subtitle">L'Expérience Fashion Code</p>
+                <div class="gold-line"></div>
+            </div>
+            
+            <div class="testimonials-grid">
+                <!-- Généré en JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nous Rejoindre</h2>
+                <p class="section-subtitle">Planifiez Votre Visite à Parakou</p>
+                <div class="gold-line"></div>
+            </div>
+            
+            <div class="contact-ui">
+                <div class="contact-info-area">
+                    <div class="info-block">
+                        <h4>Téléphone & Réservations</h4>
+                        <ul class="contact-details-list">
+                            <li><i class="bi bi-telephone"></i>+229 01 96 63 40 54</li>
+                            <li><i class="bi bi-whatsapp"></i>Lien direct de discussion WhatsApp</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-block">
+                        <h4>Salon & Horaires</h4>
+                        <ul class="contact-details-list">
+                            <li><i class="bi bi-calendar3"></i><span>Mardi à Dimanche : 08H00 - 19H00</span></li>
+                            <li><i class="bi bi-x-circle"></i>Lundi : Fermé</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-block">
+                        <h4>L'Adresse du Salon</h4>
+                        <p class="contact-details-list" style="font-weight: 300; line-height: 1.8;">
+                            <i class="bi bi-geo-alt"></i>
+                            Quartier Gah, dans la Von collée à la Pharmacie des 3 banques. Dernière boutique à gauche juste avant le tout premier carrefour. Parakou, Bénin.
+                        </p>
+                    </div>
+
+                    <div class="info-block">
+                        <h4>Suivre notre actualité</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            <a href="#"><i class="bi bi-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-map-area">
+                    <div class="map-maquette">
+                        <i class="bi bi-geo-alt"></i>
+                        <span>FASHION CODE</span>
+                        <p>Quartier Gah, Parakou, Bénin</p>
+                        <p style="font-size: 0.65rem; margin-top: 1.5rem; opacity: 0.5;">CARTE INTERACTIVE DISPONIBLE EN PRODUCTION</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">Fashion Code</div>
+            <p class="footer-slogan">Révélez votre meilleure version</p>
+            
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#prestations">Prestations</a></li>
+                    <li><a href="#galerie">Réalisations</a></li>
+                    <li><a href="#formations">Académie</a></li>
+                    <li><a href="#reservation">Rendez-vous</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <p class="copyright">&copy; 2026 Fashion Code Parakou. Tous droits réservés. Design de prestige par <a href="https://github.com/coco98-ff" target="_blank">Irèx Nicole HOUANSOU</a>.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript d'Animation & de Génération -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- HEADER SCROLL EFFECT ---
+            const header = document.getElementById('main-header');
+            window.addEventListener('scroll', () => {
+                header.classList.toggle('scrolled', window.scrollY > 50);
+            });
+
+            // --- MOBILE NAV TOGGLE ---
+            const mobileToggle = document.getElementById('mobile-nav-toggle');
+            const mainNav = document.getElementById('main-nav');
+            mobileToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+            });
+            document.querySelectorAll('#main-nav a').forEach(link => { 
+                link.addEventListener('click', () => { mainNav.classList.remove('active'); }); 
+            });
+
+
+            // --- DATA GENERATION ---
+            
+            // Prestations
+            const prestationsList = [
+                { title: 'Tresses Artistiques', desc: 'Box braids, nattes collées et coiffures d\'art graphique exécutées avec une précision chirurgicale.', img: 'https://images.unsplash.com/photo-1616165415772-870d0617387a?w=500' },
+                { title: 'Coiffure de Prestige', desc: 'Brushing soyeux, coupes modernes et soins hydratants d\'exception pour révéler la brillance naturelle.', img: 'https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=500' },
+                { title: 'Pose de Perruques', desc: 'Application invisible avec ou sans colle pour un résultat naturel absolu, sur-mesure.', img: 'https://images.unsplash.com/photo-1601625470125-96bd14b2d354?w=500' },
+                { title: 'Onglerie & Manucure', desc: 'Façonnage gel, vernis semi-permanent et soins spa des mains pour des ongles parfaits.', img: 'https://images.unsplash.com/photo-1627914436573-0498b0f8071e?w=500' },
+                { title: 'Maquillage Haute Définition', desc: 'Mise en beauté professionnelle pour événements d\'exception et mariages.', img: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=500' },
+                { title: 'Regard Signature', desc: 'Extensions de cils méthode cil-à-cil ou volume russe et microblading des sourcils.', img: 'https://images.unsplash.com/photo-1622370788094-1a9bf7f94bb6?w=500' }
+            ];
+
+            const prestationsGrid = document.querySelector('.grid-prestations');
+            prestationsList.forEach((prestation) => {
+                prestationsGrid.innerHTML += `
+                    <div class="prestation-card reveal">
+                        <div class="prestation-img-wrapper">
+                            <img src="${prestation.img}" alt="${prestation.title}">
+                        </div>
+                        <div class="prestation-card-info">
+                            <div>
+                                <h3>${prestation.title}</h3>
+                                <p>${prestation.desc}</p>
+                            </div>
+                            <a href="#reservation" class="btn-card-reserve">Découvrir <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Galerie (Simple grid filtering)
+            const galerieData = [
+                { id: 1, cat: 'tresses', img: 'https://images.unsplash.com/photo-1616165415772-870d0617387a?w=500' },
+                { id: 2, cat: 'visage', img: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=500' },
+                { id: 3, cat: 'ongles', img: 'https://images.unsplash.com/photo-1627914436573-0498b0f8071e?w=500' },
+                { id: 4, cat: 'tresses', img: 'https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=500' },
+                { id: 5, cat: 'visage', img: 'https://images.unsplash.com/photo-1622370788094-1a9bf7f94bb6?w=500' },
+                { id: 6, cat: 'ongles', img: 'https://images.unsplash.com/photo-1620601323315-9989b52a4e21?w=500' }
+            ];
+
+            const galerieGrid = document.querySelector('.galerie-grid');
+            galerieData.forEach(item => {
+                galerieGrid.innerHTML += `
+                    <div class="galerie-item ${item.cat} show" data-id="${item.id}" data-cat="${item.cat}">
+                        <img src="${item.img}" alt="Création ${item.id}">
+                    </div>
+                `;
+            });
+
+            // Équipe
+            const equipeData = [
+                { name: 'Grace O.', pos: 'Lead Tresses & Créativité', img: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=300', specs: ['Tresses complexes', 'Nattes d\'art', 'Stylisme Afro'] },
+                { name: 'Awa K.', pos: 'Make-Up Artist & Regard', img: 'https://images.unsplash.com/photo-1521119989659-a83eee488004?w=300', specs: ['Teint Parfait', 'Microblading', 'Volume Russe'] },
+                { name: 'Sophie L.', pos: 'Styliste Ongulaire', img: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=300', specs: ['Gel-X', 'Nail Art', 'Manucure Russe'] }
+            ];
+
+            const equipeGrid = document.querySelector('.equipe-grid');
+            equipeData.forEach(member => {
+                let specsHtml = member.specs.map(s => `<span class="spec-tag">${s}</span>`).join('');
+                equipeGrid.innerHTML += `
+                    <div class="equipe-card reveal">
+                        <div class="equipe-img-container">
+                            <img src="${member.img}" alt="${member.name}">
+                        </div>
+                        <div class="equipe-info">
+                            <h4>${member.name}</h4>
+                            <p>${member.pos}</p>
+                            <div class="equipe-specialites">${specsHtml}</div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Témoignages
+            const testimonialsData = [
+                { name: 'Fabiola M.', initial: 'F', city: 'Parakou', text: 'Un chef-d\'œuvre à chaque passage. Le niveau d\'exigence de Fashion Code redéfinit la beauté à Parakou. Mes tresses reçoivent des compliments tous les jours.' },
+                { name: 'Cynthia K.', initial: 'C', city: 'Cotonou', text: 'Je fais le déplacement pour leur pose de perruques. Finitions invisibles, accueil digne d\'un grand hôtel parisien, professionnalisme sans faille.' }
+            ];
+
+            const testimonialsGrid = document.querySelector('.testimonials-grid');
+            testimonialsData.forEach(item => {
+                testimonialsGrid.innerHTML += `
+                    <div class="testimonial-card reveal">
+                        <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                        <p>" ${item.text} "</p>
+                        <div class="client-info">
+                            <div class="client-avatar">${item.initial}</div>
+                            <div class="client-name">${item.name} <span>${item.city}</span></div>
+                        </div>
+                    </div>
+                `;
+            });
+
+
+            // --- GALERIE FILTERS ---
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galerieItems = document.querySelectorAll('.galerie-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    const filter = e.target.getAttribute('data-filter');
+
+                    galerieItems.forEach(item => {
+                        item.classList.remove('show');
+                        setTimeout(() => {
+                            if (filter === 'all' || item.getAttribute('data-cat') === filter) {
+                                item.style.display = 'block';
+                                setTimeout(() => { item.classList.add('show'); }, 10);
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        }, 300);
+                    });
+                });
+            });
+
+            // --- LIGHTBOX ---
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxClose = document.getElementById('lightbox-close');
+
+            galerieGrid.addEventListener('click', (e) => {
+                const clickedItem = e.target.closest('.galerie-item');
+                if (clickedItem) {
+                    const imgSrc = clickedItem.querySelector('img').getAttribute('src');
+                    lightboxImg.setAttribute('src', imgSrc);
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+
+            const closeLightbox = () => { lightbox.classList.remove('active'); document.body.style.overflow = ''; };
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+
+
+            // --- AVANT/APRÈS COMPARATEUR ---
+            const compSlider = document.getElementById('comp-slider');
+            const compAfter = document.getElementById('comp-after');
+            const compHandle = document.getElementById('comp-handle');
+
+            compSlider.addEventListener('input', (e) => {
+                const sliderPos = e.target.value;
+                compAfter.style.width = `${sliderPos}%`;
+                compHandle.style.left = `${sliderPos}%`;
+            });
+
+
+            // --- RÉSERVATION LOGIQUE INTERACTIVE ---
+            const bookingItems = document.querySelectorAll('.booking-item');
+            bookingItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const group = item.closest('.service-selection, .date-time-selection');
+                    group.querySelectorAll('.booking-item').forEach(bi => bi.classList.remove('selected'));
+                    item.classList.add('selected');
+                });
+            });
+
+
+            // --- REVEAL ON SCROLL ---
+            const reveals = document.querySelectorAll('.reveal');
+            const revealOnScroll = () => {
+                for (let i = 0; i < reveals.length; i++) {
+                    let windowHeight = window.innerHeight;
+                    let elementTop = reveals[i].getBoundingClientRect().top;
+                    let elementVisible = 150;
+
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveals[i].classList.add('active');
+                    }
+                }
+            };
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll();
+        });
+    </script>
+</body>
+</html>
